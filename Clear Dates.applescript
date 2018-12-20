@@ -73,7 +73,7 @@ on main()
 	tell application "OmniFocus"
 		tell content of first document window of front document
 			--Get selection
-			set validSelectedItemsList to value of (selected trees where class of its value is not item and class of its value is not folder and class of its value is not context and class of its value is not perspective)
+			set validSelectedItemsList to value of (selected trees where class of its value is not item and class of its value is not folder and class of its value is not deprecated context and class of its value is not perspective)
 			set totalItems to count of validSelectedItemsList
 			if totalItems is 0 then
 				set alertName to "Error"
@@ -109,7 +109,7 @@ end main
 on getContext(contextName)
 	tell application "OmniFocus"
 		tell front document
-			set contextID to id of item 1 of (complete contextName as context)
+			set contextID to id of item 1 of (complete contextName as deprecated context)
 			return first deprecated context whose id is contextID
 		end tell
 	end tell
