@@ -134,7 +134,11 @@ on main()
 		set alertName to "General"
 		set alertTitle to "Script complete"
 		if successTot > 1 then set alertItemNum to "s"
-		set alertText to successTot & " item" & alertItemNum & " now due tomorrow." as string
+		if mode is "start" then
+			set alertText to successTot & " item" & alertItemNum & " now deferred to tomorrow." as string
+		else if mode is "due" then
+			set alertText to successTot & " item" & alertItemNum & " now due tomorrow." as string
+		end if
 		my notify(alertName, alertTitle, alertText)
 	end if
 end main
