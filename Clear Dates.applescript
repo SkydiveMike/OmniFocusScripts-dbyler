@@ -110,7 +110,7 @@ on getContext(contextName)
 	tell application "OmniFocus"
 		tell front document
 			set contextID to id of item 1 of (complete contextName as context)
-			return first context whose id is contextID
+			return first deprecated context whose id is contextID
 		end tell
 	end tell
 end getContext
