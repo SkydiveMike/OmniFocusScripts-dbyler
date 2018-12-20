@@ -83,7 +83,7 @@
 --The following setting changes script mode. Options: "start" or "due" (quotes needed)
 property mode : "start"
 
-property showSummaryNotification : false --if true, will display success notifications
+property showSummaryNotification : true --if true, will display success notifications
 property useGrowl : true --if true, will use Growl for success/failure alerts
 property startTime : 6 --Start hour for items not previously assigned a start time (24 hr clock)
 property dueTime : 17 --Due hour for items not previously assigned a due time (24 hr clock)
