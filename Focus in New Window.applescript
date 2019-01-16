@@ -62,6 +62,13 @@ on main()
 		tell front document window of front document
 			set focus to myFocus
 		end tell
+
+		-- ignoring application responses
+		tell application "Keyboard Maestro Engine"
+			do script "Default Window Look"
+		end tell
+		-- end ignoring
+
 	end tell
 end main
 
